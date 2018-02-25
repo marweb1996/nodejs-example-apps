@@ -260,7 +260,6 @@ describe("POST /users/login", () => {
                 }
 
                 User.findById(users[1]._id).then((user) => {
-                    // NOT working
                     expect(user.tokens[0]).toInclude({
                         access: 'auth',
                         token: res.headers['x-auth']
